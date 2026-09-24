@@ -116,3 +116,99 @@ $total = $subtotal - $discount + $adminFee;
 </body>
 
 </html>
+
+<section class="test-case">
+    <h2>Pengujian: Lima Test Case</h2>
+
+    <p>
+        Kolom Expected dihitung manual, sedangkan Actual dihitung ulang
+        oleh PHP dengan rumus yang sama untuk menentukan status PASS/FAIL.
+    </p>
+
+    <?php
+    $testCases = [
+        [
+            'fee' => 350000,
+            'participants' => 1,
+            'discount' => 0,
+            'admin' => 25000,
+            'expected' => 375000
+        ],
+        [
+            'fee' => 350000,
+            'participants' => 1,
+            'discount' => 10,
+            'admin' => 25000,
+            'expected' => 340000
+        ],
+        [
+            'fee' => 350000,
+            'participants' => 2,
+            'discount' => 25,
+            'admin' => 25000,
+            'expected' => 550000
+        ],
+        [
+            'fee' => 0,
+            'participants' => 1,
+            'discount' => 10,
+            'admin' => 0,
+            'expected' => 0
+        ],
+        [
+            'fee' => 2500000,
+            'participants' => 3,
+            'discount' => 10,
+            'admin' => 50000,
+            'expected' => 6800000
+        ],
+    ];
+    ?>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Fee</th>
+                <th>Peserta</th>
+                <th>Diskon</th>
+                <th>Admin</th>
+                <th>Expected</th>
+                <th>Actual</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($testCases as $index => $test): ?>
+
+                <?php
+                $subtotalTest = $test['fee'] * $test['participants'];
+                $discountTest = intdiv(
+                    $subtotalTest * $test['discount'],
+                    100
+                );
+                $actualTest = $subtotalTest - $discountTest + $test['admin'];
+
+                $statusTest =
+                    $actualTest === $test['expected']
+                    ? 'PASS'
+                    : 'FAIL';
+                ?>
+
+                <tr>
+                    <td><?= $index + 1 ?></td>
+                    <td>Rp <?= number_format($test['fee'], 0, ',', '.') ?></td>
+                    <td><?= $test['participants'] ?></td>
+                    <td><?= $test['discount'] ?>%</td>
+                    <td>Rp <?= number_format($test['admin'], 0, ',', '.') ?></td>
+                    <td>Rp <?= number_format($test['expected'], 0, ',', '.') ?></td>
+                    <td>Rp <?= number_format($actualTest, 0, ',', '.') ?></td>
+                    <td><?= $statusTest ?></td>
+                </tr>
+
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+</section>

@@ -1,0 +1,64 @@
+PERBANDINGAN LOCAL DEVELOPMENT VS HOSTING / PRODUCTION
+
+Aspek: URL
+Local Development:
+localhost atau kursusku-prototype.test
+
+Hosting / Production:
+Domain atau subdomain publik yang dapat diakses melalui internet.
+
+
+Aspek: Lokasi File
+Local Development:
+Folder proyek berada di laptop mahasiswa dan dijalankan menggunakan Laragon.
+
+Hosting / Production:
+File proyek berada pada server hosting.
+
+
+Aspek: Database
+Local Development:
+Database dapat menggunakan MySQL lokal melalui Laragon jika diperlukan.
+
+Hosting / Production:
+Database menggunakan database server yang disediakan oleh hosting.
+
+
+Aspek: Environment
+Local Development:
+Development dan digunakan untuk proses pembuatan serta pengujian aplikasi.
+
+Hosting / Production:
+Production dan digunakan untuk aplikasi yang diakses pengguna.
+
+
+Aspek: HTTPS / SSL
+Local Development:
+Tidak selalu tersedia.
+
+Hosting / Production:
+Seharusnya HTTPS aktif untuk melindungi data saat transit.
+
+
+Aspek: Debug
+Local Development:
+Debug dapat membantu proses belajar dan menemukan kesalahan.
+
+Hosting / Production:
+Detail error sensitif tidak seharusnya ditampilkan kepada pengguna.
+
+
+Aspek: Secret
+Local Development:
+Secret disimpan secara lokal dan tidak dibagikan.
+
+Hosting / Production:
+Secret disimpan secara aman sebagai konfigurasi server.
+
+
+Aspek: Document Root
+Local Development:
+Folder proyek berada di document root Laragon.
+
+Hosting / Production:
+Folder web ditentukan oleh provider. Pada Laravel nantinya document root diarahkan ke folder public.

@@ -829,3 +829,454 @@ header nav a:first-child {
         height: 52px;
     }
 }
+
+/* =========================
+   HASIL PENDAFTARAN
+   ========================= */
+
+.result-page {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+
+/* NAVBAR HASIL */
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-wrap nav {
+    display: flex;
+    gap: 24px;
+    background: transparent;
+    padding: 0;
+}
+
+.nav-wrap nav a {
+    margin: 0;
+    color: white;
+}
+
+
+/* HEADER HASIL */
+
+.alert-success {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+}
+
+.alert-success .eyebrow {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.alert-success h1 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.alert-success p:last-child {
+    margin: 0;
+    opacity: 0.9;
+}
+
+
+/* KARTU RINGKASAN */
+
+.summary-card {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.summary-card h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #172554;
+}
+
+
+/* DATA PENDAFTARAN */
+
+.summary-list {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    margin: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.summary-list dt,
+.summary-list dd {
+    margin: 0;
+    padding: 15px 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-list dt {
+    font-weight: bold;
+    color: #475569;
+    background: #f8fafc;
+}
+
+.summary-list dd {
+    color: #1e293b;
+}
+
+
+/* TOMBOL KEMBALI */
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white !important;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-link:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .result-page {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .alert-success {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .alert-success h1 {
+        font-size: 25px;
+    }
+
+    .summary-card {
+        padding: 22px;
+        border-radius: 16px;
+    }
+
+    .summary-list {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-list dt {
+        padding-bottom: 5px;
+        border-bottom: none;
+    }
+
+    .summary-list dd {
+        padding-top: 5px;
+    }
+
+    .nav-wrap {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-wrap nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* =========================
+   REGISTRATION PAGE
+   ========================= */
+
+.page-intro {
+    max-width: 760px;
+    margin: 55px auto 25px;
+}
+
+.page-intro .eyebrow {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    background: #eef4ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.page-intro h1 {
+    margin: 0 0 12px;
+    color: #172554;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.page-intro > p:last-child {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* FORM CARD */
+
+.form-card {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 70px;
+    padding: 34px;
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+
+/* FORM */
+
+.registration-form {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label,
+.form-group legend {
+    display: block;
+    margin-bottom: 9px;
+    color: #172554;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 15px;
+    margin: 0;
+    border: 1px solid #d9e2ef;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #172554;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* FOCUS */
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* RADIO & CHECKBOX */
+
+.form-group fieldset,
+fieldset.form-group {
+    padding: 0;
+    border: 0;
+}
+
+.choice {
+    display: inline-flex !important;
+    align-items: center;
+    width: auto !important;
+    margin: 0 22px 8px 0 !important;
+    color: #475569 !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+}
+
+.choice input[type="radio"],
+.choice input[type="checkbox"] {
+    width: 17px !important;
+    height: 17px;
+    margin: 0 8px 0 0 !important;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+
+/* HELP TEXT */
+
+.help {
+    display: block;
+    margin-top: 7px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.registration-form .btn-primary {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 5px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+    transition: all 0.2s ease;
+}
+
+.registration-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.28);
+}
+
+.registration-form .btn-primary:active {
+    transform: translateY(0);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page-intro {
+        margin: 35px auto 20px;
+    }
+
+    .page-intro h1 {
+        font-size: 30px;
+    }
+
+    .form-card {
+        padding: 22px;
+        margin-bottom: 45px;
+        border-radius: 16px;
+    }
+
+    .choice {
+        display: flex !important;
+        margin-bottom: 12px !important;
+    }
+
+}
+
+/* =========================
+   NAVBAR - REGISTRATION & RESULT
+   ========================= */
+
+.site-header {
+    width: 100%;
+    background: #172554;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.12);
+}
+
+.site-header .nav-wrap {
+    max-width: 1100px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header .brand {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.site-header nav a {
+    color: #dbeafe;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-header nav a:hover {
+    color: #ffffff;
+}
+
+
+/* NAVBAR MOBILE */
+
+@media (max-width: 600px) {
+
+    .site-header .nav-wrap {
+        min-height: auto;
+        padding: 16px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .site-header nav {
+        width: 100%;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .site-header nav a {
+        font-size: 13px;
+    }
+
+}
+

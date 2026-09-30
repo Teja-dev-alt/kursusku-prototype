@@ -1,0 +1,15 @@
+TEST MATRIX - WEEK 05 KURSUSKU
+
+No.  Test              Status   Catatan
+1    Load form         Lulus    registration.php dapat dibuka dan form tampil tanpa error.
+2    Required          Lulus    Field wajib ditahan browser ketika form dikirim tanpa diisi.
+3    Email             Lulus    Field email menolak format email yang tidak valid.
+4    Nama pendek       Lulus    minlength="3" mencegah nama dengan dua karakter.
+5    GET               Lulus    Parameter GET terlihat pada URL saat menggunakan query string.
+6    POST              Lulus    Data POST ditampilkan pada halaman hasil dan tidak muncul pada URL.
+7    Radio             Lulus    Pilihan Mahasiswa/Umum muncul pada ringkasan hasil.
+8    Checkbox          Lulus    Dua pilihan minat dapat dikirim dan ditampilkan setelah digabung.
+9    Textarea          Lulus    Catatan dapat dikirim dan ditampilkan kembali dengan aman.
+10   Hidden            Lulus    Nilai source "week-05" diterima dan ditampilkan pada hasil.
+11   Mobile            Lulus    Form dirancang responsif dan dapat ditampilkan satu kolom pada layar kecil.
+12   Navigasi          Lulus    Link Beranda, Katalog, dan Daftar menuju tujuan yang benar.
